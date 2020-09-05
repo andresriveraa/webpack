@@ -81,19 +81,31 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./multiEntryPoints/src/js/index.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./plugins/src/js/index.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./multiEntryPoints/src/js/index.js":
-/*!******************************************!*\
-  !*** ./multiEntryPoints/src/js/index.js ***!
-  \******************************************/
+/***/ "./plugins/src/css/css.css":
+/*!*********************************!*\
+  !*** ./plugins/src/css/css.css ***!
+  \*********************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-eval("\n\n//# sourceURL=webpack:///./multiEntryPoints/src/js/index.js?");
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./plugins/src/css/css.css?");
+
+/***/ }),
+
+/***/ "./plugins/src/js/index.js":
+/*!*********************************!*\
+  !*** ./plugins/src/js/index.js ***!
+  \*********************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_css_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css/css.css */ \"./plugins/src/css/css.css\");\n/* harmony import */ var _css_css_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_css_css__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\r\ndocument.body.innerHTML = '<p>hello plugins</p>';\n\n//# sourceURL=webpack:///./plugins/src/js/index.js?");
 
 /***/ })
 

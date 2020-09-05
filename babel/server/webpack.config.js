@@ -1,6 +1,7 @@
 const path = require('path');
 const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
 	mode: 'development',
@@ -11,6 +12,9 @@ module.exports = {
 		path: path.resolve(__dirname, 'dist/'),
 		filename: 'js/[name].js',
 	},
+	devServer: {
+		hot: true,
+	},
 	module: {
 		rules: [
 			{
@@ -20,19 +24,21 @@ module.exports = {
 					// {
 					// 	loader: MiniCSSExtractPlugin.loader
 					// },
-					MiniCSSExtractPlugin.loader,
+					// MiniCSSExtractPlugin.loader,
+					'style-loader',
 					'css-loader'
 				],
 			}
 		]
 	},
 	plugins: [
+		new webpack.HotModuleReplacementPlugin(),
 		new HtmlWebpackPlugin({
 			// title: 'name' podemos cambiar el nombre del ouput
 			minify: false
 		}),
-		new MiniCSSExtractPlugin({
-			filename: 'css/[name].css', // este crea el archivo
-		}),
+		// new MiniCSSExtractPlugin({
+		// 	filename: 'css/[name].css', // este crea el archivo
+		// }),
 	]
 };
