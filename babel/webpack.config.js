@@ -28,7 +28,14 @@ module.exports = {
 					'style-loader',
 					'css-loader'
 				],
-			}
+			},
+			{
+				test: /\.js$/,
+				use: [
+					'babel-loader',
+				],
+				exclude: /node_modules/,
+			},
 		]
 	},
 	plugins: [
